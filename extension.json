@@ -1,0 +1,20 @@
+{
+	"name": "ELanguage",
+	"version": "1.0.0",
+	"author": [
+		"[[User:Brad|Brad]]"
+	],
+	"url": "https://github.com/atitd-community/mediawiki-elanguage",
+	"descriptionmsg": "Adds some simple functionality to help manage the multilingual nature of the ATITD Wiki",
+	"type": "atitd",
+	"AutoloadClasses": {
+		"ELanguage": "ELanguage_body.php"
+	},
+	"Hooks": {
+		"EditPage::attemptSave:after":     "ELanguage::onEditPageAttemptSaveAfter",
+		"EditPage::importFormData":        "ELanguage::onEditPageImportFormData",
+		"EditPageGetCheckboxesDefinition": "ELanguage::onEditPageGetCheckboxesDefinition",
+		"LanguageLinks":                   "ELanguage::onLanguageLinks"
+	},
+	"manifest_version": 1
+}
