@@ -92,8 +92,8 @@ class ELanguage
 		$curPageLang  = $title->getPageLanguage()->getCode();
 		$addLanguages = $wgAlwaysShowLanguages;
 
-		// If the page doesn't exist or isn't in main namespace, don't show language links
-		if( !$title->exists() || !$title->inNamespace(0)) {
+		// If the page doesn't exist or isn't in the main or Project namespace, don't show language links
+		if( !$title->exists() || !$title->inNamespaces([0, 4])) {
 			return true;
 		}
 
