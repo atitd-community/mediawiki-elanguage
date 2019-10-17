@@ -12,7 +12,7 @@ class ELanguage
 	 */
 	public static function onEditPageAttemptSaveAfter( $editpage, $status, $resultDetails ) {
 		// Page language didn't change, so just return
-		if($editpage->ELangNew === false) {
+		if($editpage->ELangNew == false) {
 			return true;
 		}
 
